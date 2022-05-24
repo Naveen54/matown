@@ -16,11 +16,8 @@ export const COLORS = {
   };
   
   export const FONTS = {
-    bold: "InterBold",
-    semiBold: "InterSemiBold",
-    medium: "InterMedium",
-    regular: "InterRegular",
-    light: "InterLight",
+    bold: "LatoBold",
+    regular: "LatoRegular",
   };
   
   export const SHADOWS = {

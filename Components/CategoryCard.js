@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View ,Image , TouchableNativeFeedback} from 'react-native'
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
+import {FONTS} from '../constants/index';
 
 const CategoryCard = (props) => {
   const {categoryName,navigateTo,image} = props
@@ -13,7 +14,7 @@ const navigation = useNavigation();
       style={styles.image}
       resizeMode='cover'
       source={image?image:{uri:'https://img.favpng.com/18/21/19/grocery-store-shopping-bags-trolleys-supermarket-clip-art-png-favpng-wcErxTbRcn5a4t6A9NUG3acqj.jpg'}} />
-      <View style={styles.cardtext}><Text>{categoryName}</Text></View>
+      <View ><Text style={styles.cardtext}>{categoryName}</Text></View>
     </View>
     </TouchableNativeFeedback>
   )
@@ -35,6 +36,8 @@ const styles = StyleSheet.create({
         height:'100%'
     },
     cardtext:{
-        // textAlign:'center'
+      paddingTop:8,
+        fontFamily:FONTS.bold,
+        fontSize:16
     }
 })

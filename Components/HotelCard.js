@@ -1,11 +1,13 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { StyleSheet, Text, View, Image,TouchableOpacity } from 'react-native'
 import React from 'react'
 import FoodImage from '../assets/restuarant.jpg'
 import { FONTS, SIZES, COLORS } from '../constants'
+import { useNavigation } from '@react-navigation/native'
 
 const HotelCard = () => {
+  const navigation = useNavigation()
   return (
-    <View style={styles.HotelCard}>
+    <TouchableOpacity style={styles.HotelCard} onPress={()=>navigation.navigate("Hotel")} >
       <View style={styles.hotelImageContainer} >
 
         <Image style={styles.hotelImage} resizeMode='cover' source={FoodImage} />
@@ -28,19 +30,19 @@ const HotelCard = () => {
             </Text>
           </View>
         </View>
-        <View style={styles.typeOfFood}>
-            <Text>
-              South Indian,North Indian,Chineese
+        <View >
+            <Text style={styles.typeOfFood}>
+              South Indian, North Indian, Chineese
             </Text>
           </View>
           <View>
-            <Text>
+            <Text style={styles.location}>
               Thiruverkadu
             </Text>
           </View>
       </View>
 
-    </View>
+    </TouchableOpacity>
   )
 }
 
@@ -62,7 +64,7 @@ const styles = StyleSheet.create({
   hotelName: {
     color: 'white',
     fontSize: 18,
-    fontWeight:'bold'
+    fontFamily:FONTS.bold
   },
   hotelImage: {
     height: 200,
@@ -71,6 +73,7 @@ const styles = StyleSheet.create({
   },
   hotelDescription:{
       paddingHorizontal:10,
+      fontFamily:FONTS.regular
   },
   RatingAndTimingContainer:{
     flexDirection:'row',
@@ -84,14 +87,20 @@ const styles = StyleSheet.create({
   },
   rating:{
     paddingRight:4,
-    fontWeight:'bold'
+    fontFamily:FONTS.bold
   },
   Delivery:{
 paddingLeft:4,
-fontWeight:'bold'
+fontFamily:FONTS.bold
   },
   typeOfFood:{
-        paddingBottom:4
+    fontFamily:FONTS.regular,
+    paddingBottom:4,
+    fontSize:16
+  },
+  location:{
+    fontFamily:FONTS.regular,
+    fontSize:16
   }
 
 })

@@ -16,7 +16,7 @@ const Home = () => {
     <ScrollView style={styles.home}>
       <HeaderCard/>
       <View style={styles.cardList}>
-<CategoryCard categoryName="Food" navigateTo={"Food"} image={BurgerImage}/>
+<CategoryCard categoryName="Food" navigateTo={"FoodHome"} image={BurgerImage}/>
 <CategoryCard categoryName="Grocery" image={GroceryImage}/>
 <CategoryCard categoryName="Meat" image={MeatImage}/>
 <CategoryCard categoryName="Pharmacheuticals" image={PharmImagea}/>
