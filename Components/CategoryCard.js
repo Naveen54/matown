@@ -38,6 +38,6 @@ const styles = StyleSheet.create({
     cardtext:{
       paddingTop:8,
         fontFamily:FONTS.bold,
-        fontSize:16
+        fontSize:12
     }
 })

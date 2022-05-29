@@ -31,7 +31,8 @@ export default function App() {
       <NavigationContainer>
       <Tab.Navigator
       screenOptions={{
-        tabBarActiveTintColor:"#ff0000"
+        tabBarActiveTintColor:"#ff0000",
+        headerShown:false
       }}>
       <Tab.Screen 
       options={{
