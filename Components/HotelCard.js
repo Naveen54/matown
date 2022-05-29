@@ -52,11 +52,11 @@ const styles = StyleSheet.create({
   HotelCard: {
     height: 280,
     borderRadius: 10,
-    borderWidth: 3,
-    borderColor: 'black',
-    marginHorizontal: 6,
+    backgroundColor:'white',
+    marginHorizontal: 10,
     marginVertical: 10,
     flex: 1,
+    elevation:10
   },
   hotelImageContainer: {
     // elevation: 10
@@ -69,6 +69,8 @@ const styles = StyleSheet.create({
   hotelImage: {
     height: 200,
     width: '100%',
+    borderTopLeftRadius:10,
+    borderTopRightRadius:10
 
   },
   hotelDescription:{
